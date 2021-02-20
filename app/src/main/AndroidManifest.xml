@@ -2,15 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.worldskill">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:networkSecurityConfig="@xml/network_config"
         android:theme="@style/Theme.Worldskill">
-        <activity android:name=".RegisterPage"></activity>
+        <activity android:name=".PetUpgrade"></activity>
+        <activity android:name=".PetAdd" />
+        <activity android:name=".PetDetail" />
+        <activity
+            android:name=".PetList"
+            android:label="@string/title_activity_pet_list"
+            android:theme="@style/Theme.Worldskill.NoActionBar" />
+        <activity android:name=".RegisterPage" />
         <activity android:name=".StartPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -21,6 +30,4 @@
         </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
 </manifest>
